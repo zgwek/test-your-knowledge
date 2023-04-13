@@ -1,4 +1,22 @@
+//import { GalleryItem } from "../../../done/lab10/js/gallery";
+
 // add class definition here (must be before you use it)
+class GalleryItem {
+   // constructor replaces the function constructor
+   constructor(id,name) {
+   this.name = name;
+   this.id = id;
+   }
+
+   render() {
+      let list = document.createElement('li');
+      list.textContent = this.name;
+      //console.log(list.textContent);
+      list.setAttribute('data-id', this.id);
+      return list;
+      }
+   
+}
 
 
 // sample data using your class
@@ -13,3 +31,5 @@ const galleries = [
 ];
 
 // add module code here
+const getSampleGalleries = () => galleries;
+export { GalleryItem, getSampleGalleries };
